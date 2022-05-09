@@ -58,8 +58,23 @@ class ServiceTest {
     }
 
     @Test
+    void saveExistingHomework() {
+        assertEquals(0, service.saveHomework("23", "XML", 8, 5));
+    }
+
+    @Test
+    void saveStudentWithValidData() {
+        assertEquals(1, service.saveStudent("13", "Name", 566));
+    }
+
+    @Test
     void deleteHomework() {
         assertEquals(0, service.deleteHomework("1"));
+    }
+
+    @Test
+    void deleteStudent() {
+        assertEquals(0, service.deleteStudent("1"));
     }
 
     @Test
